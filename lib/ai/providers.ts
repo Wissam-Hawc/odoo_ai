@@ -31,7 +31,7 @@ export const myProvider = isTestEnvironment
               throw new Error('GROQ_API_KEY is not defined in environment variables');
             }
             console.log('Using Groq model for chat-model: llama3-8b-8192');
-            return groq('llama3.3-8b-8192');
+            return groq('llama-3.3-70b-versatile');
           })(),
           middleware: extractReasoningMiddleware({ tagName: 'think' }),
         }),
